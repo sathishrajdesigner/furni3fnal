@@ -7,6 +7,12 @@ img.nivo-main-image {
   width: 100%;
 }
 
+a.view {
+  text-align: center;
+  display: block;
+  padding-top: 2%;
+  font-size: small;
+}
 #map {
   height: 100%;
 }
@@ -219,7 +225,7 @@ img.nivo-main-image {
 /* -----------------------------------------------------
 	Input
 ----------------------------------------------------- */
-input[type="text"], input[type="password"],  input[type="email"]  {
+input[type="text"], input[type="password"] {
   background: #f6f6f6 none repeat scroll 0 0;
   border: medium none;
   box-shadow: none;

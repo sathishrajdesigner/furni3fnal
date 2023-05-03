@@ -120,8 +120,9 @@
 								<li><a href="index.html">home</a>
 									
 								</li>
+									
+								<li><a href="shop.html">products</a></li>
 									<!--
-								<li><a href="shop.html">products</a>
 									<div class="mega-menu menu-scroll">
 										<div class="table">
 											<div class="table-cell">
@@ -232,12 +233,10 @@
 									<nav id="dropdown">
 										<ul>
 											<li><a href="index.html">home</a>
-												<ul>
-													<li><a href="index.html">Home Version 1</a></li>
-													
-												</ul>
+										
 											</li>
-											<!-- <li><a href="shop.html">products</a></li>
+											
+										<li><a href="shop.html">products</a></li>	<!-- 
 											<li><a href="shop-sidebar.html">accesories</a></li>
 											<li><a href="shop-list.html">lookbook</a></li>
 											<li><a href="blog.html">blog</a></li>
@@ -299,41 +298,16 @@
 					<div class="contact-us customer-login bg-white">
 						<div class="row">
 							<div class="col-lg-4 col-md-5">
-								<div class="contact-details">
-									<h4 class="title-1 title-border text-uppercase mb-30">contact details</h4>
-									<ul>
-										<li>
-											<i class="zmdi zmdi-pin"></i>
-											<span><a href="https://goo.gl/maps/PdXPLkPULcrrS3GbA" target="_blank"><span>Address :</span>3-21-25/2, Near ABM Hotel, <br>Cumbum Road, Theni - 6250531.</a></span>
-										
-										</li>
-										<li>
-										
-											
-									
-											<i class="zmdi zmdi-phone"></i>
-											<span><a href="tel:7094 16 4777"><span>Cell-Phone :</span>7094 16 4777</a></span>
-											<span><a href="tel:04546-264433"><span>Telephone :</span>04546-264433</a></span>
-										</li>
-										<li>
-											<i class="zmdi zmdi-whatsapp"></i>
-											<span><a href="https://api.whatsapp.com/send?phone=919488264433" target="_blank"><span>Whatsapp :</span>94882 64433</a></span>
-										</li>
-										<li>
-											<i class="zmdi zmdi-email"></i>
-										
-											<span><a href="mailto:keralafurnituregallery@gmail.com" target="_blank"><span>Email :</span>keralafurnituregallery@gmail.com</a></span>
-										</li>
-									</ul>
-								</div>
+
+								
 								<div class="send-message mt-60">
 									<form id="contact-form" method="POST" onsubmit="SendEmail();reset(); return false;">
 										<h4 class="title-1 title-border text-uppercase mb-30">send message</h4>
-										<input type="text" name="con_name" id="con_name"  required placeholder="Your name here...*" />
-										<input type="email" name="con_email" id="con_email" required placeholder="Your email here..*." />
-										<textarea class="custom-textarea" name="con_message" id="message" placeholder="Your comment here..."></textarea>
-										<button type="submit"  class="button-one submit-button mt-20" id="submit-form">Submit</button>
-																				<p class="form-message"></p>
+										<input type="text" name="con_name" placeholder="Your name here..." />
+										<input type="text" name="con_email" placeholder="Your email here..." />
+										<textarea class="custom-textarea" name="con_message" placeholder="Your comment here..."></textarea>
+										<button class="button-one submit-button mt-20" data-text="submit message" id="submit-form" type="submit">submit message</button>
+										<p class="form-message"></p>
 									</form>
 								</div>
 							</div>
@@ -439,24 +413,17 @@
 		"https://smtpjs.com/v3/smtp.js">
 	  </script>
 	  <script>
-
-function SendEmail(){
-	let con_name = document.getElementById("con_name").value;
-    let con_email = document.getElementById("con_email").value;
-    let message = document.getElementById("message").value;
-	let finalmessage = `Name : ${con_name} <br>  Email : ${con_email} <br>  Message : ${message}`;
-
     Email.send({
     Host : "smtp.elasticemail.com",
     Username : "itsyourdesignerrr@gmail.com",
-    Password : "65E690862C811A5873F97DC1D64F797E4BBE",
-    To : "sathishrajdesigner@gmail.com",
+    Password : "BEA572D7170349C1F11855A15B01B2CC6F0C",
+    To : 'sathishrajdesigner@gmail.com',
     From : "itsyourdesignerrr@gmail.com",
-    Subject : "email form kerala furniture website ",
+    Subject : "email form ",
     Body : finalmessage
 }).then(
   message => alert(message)
-);}  </script>
+);  </script>
 		<!-- jquery latest version -->
 		<script src="js/vendor/jquery-3.6.0.min.js"></script>
 		<script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
