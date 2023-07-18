@@ -302,13 +302,13 @@
 
 								
 								<div class="send-message mt-60">
-									<form id="contact-form" method="POST" onsubmit="SendEmail();reset(); return false;">
+									<form  onsubmit="sendEmail(); reset(); return false;"  id="contact-form" >
 										<h4 class="title-1 title-border text-uppercase mb-30">send message</h4>
-										<input type="text" name="con_name" placeholder="Your name here..." />
-										<input type="text" name="con_email" placeholder="Your email here..." />
-										<textarea class="custom-textarea" name="con_message" placeholder="Your comment here..."></textarea>
-										<button class="button-one submit-button mt-20" data-text="submit message" id="submit-form" type="submit">submit message</button>
-										<p class="form-message"></p>
+										<input type="text" id="con-name" name="con_name" placeholder="Your name here..." />
+										<input type="text" id="con_email" name="con_email" placeholder="Your email here..." />
+										<textarea class="custom-textarea" id="con_text" name="con_message" placeholder="Your comment here..."></textarea>
+										<button class="button-one submit-button mt-20" data-text="submit message" id="submit" type="submit">submit message</button>
+										
 									</form>
 								</div>
 							</div>
@@ -372,7 +372,7 @@
 									<a target="_blank" title="Facebook" href="https://www.facebook.com/profile.php?id=100075879652193" class="facebook social-icon"><i class="zmdi zmdi-facebook"></i></a>
 	
 							
-								   </ul>
+								
 								</div>
 							</div>
 						</div>
@@ -402,10 +402,29 @@
 				<!-- Copyright-area start -->
 			</footer>
 			<!-- FOOTER END -->
-					
-					
+			<script>		
 
-			
+      function sendEmail() {
+		let name = document.getElementById("con-name").value;
+    let email = document.getElementById("con_email").value;
+    let message = document.getElementById("con_text").value;
+    let finalmessage = `Name : ${name} <br>  Email : ${email} <br>  Message : ${message} <br>`;
+        Email.send({
+
+        Host: "smtp.elasticemail.com",
+        Username : "enquiry@keralafurnituregallery.com",
+        Password : "87052C867B753517673802CADA593C50B77B",
+         To : ["keralafurnituregallery@gmail.com" ],
+		 Bcc : ["datainfo@adonzygroup.com", "itsyourdesignerrr@gmail.com"],
+        From : "enquiry@keralafurnituregallery.com", // put a real email address that is verified
+        Subject : "Email from " + document.getElementById("con-name").value,
+        Body : finalmessage
+		       
+        }).then(
+            message => alert("mail sent successfully")
+        );}
+
+		</script>
 		</div>
 		<!-- WRAPPER END -->
 
@@ -413,19 +432,7 @@
 		<script src=
 		"https://smtpjs.com/v3/smtp.js">
 	  </script>
-	  <script>
-    Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "itsyourdesignerrr@gmail.com",
-    Password : "DE0258452FE9DA0B58EA73DBF7E7C53AF7AF",
-    To : 'keralafurnituregallery@gmail.com',
-	To : 'adonzy.official@gmail.com',
-	From : "itsyourdesignerrr@gmail.com",
-    Subject : "email form ",
-    Body : finalmessage
-}).then(
-  message => alert(message)
-);  </script>
+
 		<!-- jquery latest version -->
 		<script src="js/vendor/jquery-3.6.0.min.js"></script>
 		<script src="js/vendor/jquery-migrate-3.3.2.min.js"></script>
